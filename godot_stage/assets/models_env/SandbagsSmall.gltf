@@ -1,0 +1,117 @@
+{
+  "asset": {
+    "version": "2.0",
+    "generator": "ghost_port nod_to_gltf.py",
+    "extras": {
+      "source": "/home/scott/Games/xemu/starcraft_ghost/3D/Models/SandbagsSmall.nod",
+      "vertex_count": 54,
+      "triangle_count": 216,
+      "vertex_stride": 32,
+      "materials": [
+        "MS_Trench_Sandbags"
+      ]
+    }
+  },
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "SandbagsSmall",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "name": "SandbagsSmall",
+      "mesh": 0
+    }
+  ],
+  "meshes": [
+    {
+      "name": "SandbagsSmall_mesh",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "buffers": [
+    {
+      "uri": "data:application/octet-stream;base64,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KwAUACwALAAUADQALAA0AC0ALQA0AC4ALgA0ADIALgAyAC8ALwAyADMAMwAyABMAMwATABIAMwASACMAIwASACIAHwAeADUANQAeAB0ANQAdADAAMAAdACkAMAApACgAMAAoADUANQAoACcANQAnADEAMQAnACYAMQAmACUAMQAlAB8AHwAlACQAGgAZABgAGAAZABcAGAAXAA8AGAAPAA0ADQAPAA4ADQAOAAwADAAOAAMAAwAOAAIAAwACAAEAAQACAAAAAQAAABAAAQAQABEAAQARABQAFAARABMAFAATADQANAATADIANAAyABMANAATACoAKgATACkAKgApAB0AHQApADEAHQAxAB8AHwAxADUAHwA1ACMAIwA1AC8AIwAvADMAMwAvACAAMwAgACEAIQAgABUAIQAVABYAFgAVAAgAFgAIAAkACQAIAAoACQAKAAsACwAKAAUABQAKAAQABQAEAAYABQAGAAcABwAGABsABwAbABwAGQAaABgAGQAYABcAFwAYAA8ADwAYAA0ADwANAA4ADgANAAwADgAMAAMADgADAAIAAgADAAEAAgABAAAAAAABABAAEAABABEAIgASACMAIwASADMAIwAzAC8ALwAzADIALwAyAC4ALgAyACwALAAyABMALAATABQALAAUACsAHQAeADAAMAAeAB8AMAAfADEAMQAfACUAMQAlACYAMQAmACcAMQAnADAAMAAnACgAMAAoACkAMAApAB0AHQApACoAHQAqABIAEgAqADMAEgAzABMAEwAzADIAMgAzABMAMgATACQAJAATAB8AJAAfACUAJQAfAC0AJQAtACwALAAtAC4ALAAuACAAIAAuACEAIAAhABUAFQAhABYAFQAWAAgACAAWAAkACAAJAAoACgAJAAsACgALAAUACgAFAAQABAAFAAYABgAFAAcABgAHABsAGwAHABwAIgAjABIAEgAjAC8AEgAvAC4AEgAuABMAEwAuACwAEwAsABQAFAAsACsAHgAwAB8AHwAwADEAHwAxACUAJQAxACYAJgAxACcAJwAxADAAJwAwACgAKAAwACkAKQAwAB0AKQAdACoAGgAZABgAGAAZABcAGAAXAA8AGAAPAA0ADQAPAA4ADQAOAAwADAAOAAMAAwAOAAIAAwACAAEAAQACAAAAAQAAABAAAQAQABEAAQARACQAJAARAB8AJAAfACUAJQAfAB4AJQAeAB0AHQAeADAAHQAwAC0ALQAwACwALQAsAC4ALgAsACoALgAqACkAKQAqAB0AKQAdAB4AKQAeAB8AHwAkACUAHwAlACkAKQAlACcAKQAnACgAIwAiABIAIwASAC8ALwASAC4ALgASABMALgATACwALAATABQALAAUACsAIQAgABUAIQAVABYAFgAVAAgAFgAIAAkACQAIAAoACQAKAAsACwAKAAUABQAKAAQABQAEAAYABQAGAAcABwAGABsABwAbABwAGQAaABgAGQAYABcAFwAYAA8ADwAYAA0ADwANAA4ADgANAAwADgAMAAMADgADAAIAAgADAAEAAgABAAAAAAABABAAEAABABEAEQABACYAEQAmACUAJQAmACcAJQAnAC0ALQAnACwALQAsAC4A",
+      "byteLength": 3024
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteOffset": 0,
+      "byteLength": 648,
+      "target": 34962,
+      "byteStride": 12
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 648,
+      "byteLength": 648,
+      "target": 34962,
+      "byteStride": 12
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 1296,
+      "byteLength": 432,
+      "target": 34962,
+      "byteStride": 8
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 1728,
+      "byteLength": 1296,
+      "target": 34963
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 54,
+      "type": "VEC3",
+      "min": [
+        -1.3477026224136353,
+        -0.8060510158538818,
+        -0.26054444909095764
+      ],
+      "max": [
+        1.3035765886306763,
+        0.9176092147827148,
+        0.6874600052833557
+      ]
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 54,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 54,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5123,
+      "count": 648,
+      "type": "SCALAR"
+    }
+  ]
+}

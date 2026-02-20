@@ -383,11 +383,13 @@ func _load_entities() -> void:
 		if ent_name == "ghost" and player_spawn == Vector3.ZERO:
 			player_spawn = pos
 
-		# Spawn live enemies and interactive doors; markers for everything else
+		# Spawn live entities for enemies, doors, pickups; markers for everything else
 		if category == "enemy":
 			_spawn_enemy(ent_name, pos)
 		elif category == "door":
 			_spawn_door(ent_name, pos)
+		elif category == "pickup":
+			_spawn_pickup(ent_name, pos)
 		else:
 			_spawn_entity_marker(ent_name, pos, category)
 
@@ -545,6 +547,21 @@ func _spawn_door(ent_name: String, pos: Vector3) -> void:
 	entity_root.add_child(door)
 
 
+func _spawn_pickup(ent_name: String, pos: Vector3) -> void:
+	## Spawn a collectible pickup at the given position.
+	var pickup_script = load("res://scripts/pickup_item.gd")
+	if pickup_script == null:
+		_spawn_entity_marker(ent_name, pos, "pickup")
+		return
+
+	var pickup := Node3D.new()
+	pickup.set_script(pickup_script)
+	pickup.position = pos
+	pickup.name = ent_name
+	pickup.set("pickup_name", ent_name)
+	entity_root.add_child(pickup)
+
+
 func _setup_environment() -> void:
 	# World environment — dark sci-fi bunker
 	var world_env := WorldEnvironment.new()
@@ -590,18 +607,18 @@ func _setup_audio() -> void:
 	ambient_player.volume_db = -6.0
 	add_child(ambient_player)
 
-	# Scan for audio tracks
-	var dir := DirAccess.open(LEVEL_AUDIO_DIR)
-	if dir == null:
-		print("No audio directory found")
-		return
-	dir.list_dir_begin()
-	var fname := dir.get_next()
-	while fname != "":
-		if fname.ends_with(".wav") and not fname.ends_with(".import"):
-			audio_tracks.append(LEVEL_AUDIO_DIR + fname)
-		fname = dir.get_next()
-	dir.list_dir_end()
+	# Scan level audio dir first, then music dir as fallback
+	for scan_dir in [LEVEL_AUDIO_DIR, "res://assets/audio/music/", "res://assets/audio/ambient/"]:
+		var dir := DirAccess.open(scan_dir)
+		if dir == null:
+			continue
+		dir.list_dir_begin()
+		var fname := dir.get_next()
+		while fname != "":
+			if fname.ends_with(".wav") and not fname.ends_with(".import"):
+				audio_tracks.append(scan_dir + fname)
+			fname = dir.get_next()
+		dir.list_dir_end()
 	audio_tracks.sort()
 	print("Found %d audio tracks for level" % audio_tracks.size())
 

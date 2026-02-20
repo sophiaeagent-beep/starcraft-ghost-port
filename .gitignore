@@ -21,9 +21,11 @@ godot_stage/.godot/
 godot_stage/.import/
 *.import
 
-# glTF models extracted from game (large + non-distributable)
+# Extracted game assets (large + non-distributable — regenerate from game files)
 godot_stage/assets/models_all/
+godot_stage/assets/models_textured/
 godot_stage/assets/audio/
+godot_stage/assets/textures/
 godot_stage/assets/levels/*.gltf
 
 # Level data (generated from NIL files — regenerate with nil_parser.py)
@@ -36,3 +38,10 @@ __pycache__/
 # OS junk
 .DS_Store
 Thumbs.db
+
+# Build output / intermediate extraction data
+out/
+
+# Binary tools (download separately)
+tools/
+ghost-port-tools/
