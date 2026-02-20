@@ -577,7 +577,7 @@ func _setup_environment() -> void:
 	env.fog_light_color = Color(0.08, 0.10, 0.14)
 	env.fog_density = 0.003
 	# Tonemap
-	env.tonemap_mode = Environment.TONE_MAP_ACES
+	env.tonemap_mode = Environment.TONE_MAPPER_ACES
 	env.tonemap_exposure = 1.1
 	world_env.environment = env
 	add_child(world_env)

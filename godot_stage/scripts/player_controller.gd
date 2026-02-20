@@ -463,7 +463,7 @@ func _fire() -> void:
 		0.0
 	)
 	var aim_dir := (cam_forward + camera.global_transform.basis * spread_offset).normalized()
-	var ray_end := cam_center + aim_dir * wep["range"]
+	var ray_end: Vector3 = cam_center + aim_dir * float(wep["range"])
 
 	var query := PhysicsRayQueryParameters3D.create(cam_center, ray_end)
 	query.exclude = [get_rid()]
@@ -635,5 +635,5 @@ func _update_hud() -> void:
 
 	if is_reloading and reload_label:
 		var wep: Dictionary = WEAPONS[current_weapon]
-		var progress := 1.0 - (reload_timer / wep["reload_time"])
+		var progress: float = 1.0 - (reload_timer / float(wep["reload_time"]))
 		reload_label.text = "RELOADING... %d%%" % int(progress * 100)
