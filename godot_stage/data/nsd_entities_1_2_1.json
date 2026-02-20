@@ -1,0 +1,2842 @@
+{
+  "level": "1_2_1_Miners_Bunker",
+  "source": "NSD",
+  "entity_count": 315,
+  "entities": [
+    {
+      "name": "ghost",
+      "position": [
+        -83.78,
+        -134.47,
+        20.62
+      ],
+      "category": "other"
+    },
+    {
+      "name": "script_object",
+      "position": [
+        -84.0,
+        -137.0,
+        19.0
+      ],
+      "category": "script"
+    },
+    {
+      "name": "script_target",
+      "position": [
+        -118.0,
+        -148.12,
+        29.0
+      ],
+      "category": "script"
+    },
+    {
+      "name": "script_target",
+      "position": [
+        -89.5,
+        -145.5,
+        18.0
+      ],
+      "category": "script"
+    },
+    {
+      "name": "script_object",
+      "position": [
+        -91.5,
+        -144.5,
+        18.0
+      ],
+      "category": "script"
+    },
+    {
+      "name": "script_target",
+      "position": [
+        -40.25,
+        -122.0,
+        10.0
+      ],
+      "category": "script"
+    },
+    {
+      "name": "movenone_model",
+      "position": [
+        -93.38,
+        -173.25,
+        0.06
+      ],
+      "category": "geometry"
+    },
+    {
+      "name": "ge_footlocker_grn_gauss",
+      "position": [
+        -77.88,
+        -112.75,
+        15.5
+      ],
+      "category": "pickup"
+    },
+    {
+      "name": "script_object",
+      "position": [
+        -125.0,
+        -147.5,
+        29.5
+      ],
+      "category": "script"
+    },
+    {
+      "name": "script_object",
+      "position": [
+        -63.5,
+        -161.0,
+        4.0
+      ],
+      "category": "script"
+    },
+    {
+      "name": "script_object",
+      "position": [
+        -63.5,
+        -160.0,
+        4.0
+      ],
+      "category": "script"
+    },
+    {
+      "name": "trigger_region",
+      "position": [
+        -35.5,
+        -93.5,
+        -2.5
+      ],
+      "category": "trigger"
+    },
+    {
+      "name": "trigger",
+      "position": [
+        0.0,
+        -94.0,
+        -6.0
+      ],
+      "category": "trigger"
+    },
+    {
+      "name": "trigger_region",
+      "position": [
+        -58.0,
+        -99.5,
+        6.0
+      ],
+      "category": "trigger"
+    },
+    {
+      "name": "trigger",
+      "position": [
+        0.0,
+        -204.0,
+        -42.0
+      ],
+      "category": "trigger"
+    },
+    {
+      "name": "trigger_region",
+      "position": [
+        -73.0,
+        -119.0,
+        6.0
+      ],
+      "category": "trigger"
+    },
+    {
+      "name": "script_object",
+      "position": [
+        11.5,
+        -96.5,
+        23.5
+      ],
+      "category": "script"
+    },
+    {
+      "name": "propTerrLift.nag",
+      "position": [
+        -26.0,
+        -94.25,
+        -3.12
+      ],
+      "category": "prop"
+    },
+    {
+      "name": "movetrack_nocfile_nograb",
+      "position": [
+        -45.0,
+        -106.75,
+        -2.81
+      ],
+      "category": "geometry"
+    },
+    {
+      "name": "script_object",
+      "position": [
+        -79.75,
+        -169.5,
+        7.0
+      ],
+      "category": "script"
+    },
+    {
+      "name": "powhealth",
+      "position": [
+        -38.88,
+        -90.5,
+        -6.88
+      ],
+      "category": "pickup"
+    },
+    {
+      "name": "powgrenade",
+      "position": [
+        -26.5,
+        -91.0,
+        -6.75
+      ],
+      "category": "pickup"
+    },
+    {
+      "name": "powgauss_2x",
+      "position": [
+        -43.5,
+        -95.12,
+        -6.88
+      ],
+      "category": "pickup"
+    },
+    {
+      "name": "cBlastObj",
+      "position": [
+        -49.0,
+        -165.0,
+        -2.25
+      ],
+      "category": "other"
+    },
+    {
+      "name": "marinesidekick",
+      "position": [
+        -46.75,
+        -163.88,
+        -1.25
+      ],
+      "category": "enemy"
+    },
+    {
+      "name": "cBlastObj",
+      "position": [
+        0.0,
+        -90.0,
+        -46.75
+      ],
+      "category": "other"
+    },
+    {
+      "name": "script_object",
+      "position": [
+        -124.88,
+        -142.12,
+        29.0
+      ],
+      "category": "script"
+    },
+    {
+      "name": "script_object",
+      "position": [
+        -35.25,
+        -179.25,
+        -1.75
+      ],
+      "category": "script"
+    },
+    {
+      "name": "cAIFightPath",
+      "position": [
+        -35.25,
+        -179.25,
+        -1.75
+      ],
+      "category": "other"
+    },
+    {
+      "name": "trigger_region",
+      "position": [
+        -88.33,
+        -137.56,
+        16.0
+      ],
+      "category": "trigger"
+    },
+    {
+      "name": "trigger",
+      "position": [
+        0.0,
+        -172.74,
+        -36.0
+      ],
+      "category": "trigger"
+    },
+    {
+      "name": "movetrack_hull_activate",
+      "position": [
+        -43.12,
+        -108.12,
+        -2.62
+      ],
+      "category": "geometry"
+    },
+    {
+      "name": "hackConsole_floor",
+      "position": [
+        -43.12,
+        -108.12,
+        -2.62
+      ],
+      "category": "door"
+    },
+    {
+      "name": "ladder_dynamic",
+      "position": [
+        -70.27,
+        -123.27,
+        13.44
+      ],
+      "category": "door"
+    },
+    {
+      "name": "instance_model",
+      "position": [
+        -34.0,
+        -185.5,
+        -2.62
+      ],
+      "category": "geometry"
+    },
+    {
+      "name": "overlord",
+      "position": [
+        -115.61,
+        -141.14,
+        20.62
+      ],
+      "category": "enemy"
+    },
+    {
+      "name": "cM121_OverlordUnload",
+      "position": [
+        -115.61,
+        -141.14,
+        20.62
+      ],
+      "category": "enemy"
+    },
+    {
+      "name": "instance_model",
+      "position": [
+        -26.0,
+        -185.5,
+        -2.62
+      ],
+      "category": "geometry"
+    },
+    {
+      "name": "instance_model",
+      "position": [
+        -18.0,
+        -185.5,
+        -2.62
+      ],
+      "category": "geometry"
+    },
+    {
+      "name": "instance_hull",
+      "position": [
+        -67.12,
+        -138.75,
+        7.0
+      ],
+      "category": "geometry"
+    },
+    {
+      "name": "instance_hull",
+      "position": [
+        -69.38,
+        -147.62,
+        12.0
+      ],
+      "category": "geometry"
+    },
+    {
+      "name": "instance_hull",
+      "position": [
+        -69.5,
+        -147.5,
+        13.72
+      ],
+      "category": "geometry"
+    },
+    {
+      "name": "marinesidekick_wounded",
+      "position": [
+        -79.33,
+        -128.78,
+        15.5
+      ],
+      "category": "enemy"
+    },
+    {
+      "name": "instance_hull",
+      "position": [
+        -81.88,
+        -125.88,
+        15.5
+      ],
+      "category": "geometry"
+    },
+    {
+      "name": "instance_hull",
+      "position": [
+        -80.25,
+        -124.75,
+        15.5
+      ],
+      "category": "geometry"
+    },
+    {
+      "name": "instance_hull",
+      "position": [
+        -81.25,
+        -125.5,
+        17.25
+      ],
+      "category": "geometry"
+    },
+    {
+      "name": "instance_hull",
+      "position": [
+        -73.5,
+        -121.25,
+        10.75
+      ],
+      "category": "geometry"
+    },
+    {
+      "name": "instance_hull",
+      "position": [
+        -72.38,
+        -122.88,
+        10.75
+      ],
+      "category": "geometry"
+    },
+    {
+      "name": "instance_hull",
+      "position": [
+        -68.38,
+        -128.0,
+        10.75
+      ],
+      "category": "geometry"
+    },
+    {
+      "name": "instance_hull",
+      "position": [
+        -52.0,
+        -96.25,
+        8.3
+      ],
+      "category": "geometry"
+    },
+    {
+      "name": "marinesidekick_wounded",
+      "position": [
+        -46.58,
+        -112.66,
+        8.38
+      ],
+      "category": "enemy"
+    },
+    {
+      "name": "hackconsole_floor_activate",
+      "position": [
+        -25.38,
+        -92.25,
+        -2.88
+      ],
+      "category": "door"
+    },
+    {
+      "name": "script_object",
+      "position": [
+        -113.75,
+        -135.25,
+        12.25
+      ],
+      "category": "script"
+    },
+    {
+      "name": "cAIFightPath",
+      "position": [
+        -113.75,
+        -135.25,
+        12.25
+      ],
+      "category": "other"
+    },
+    {
+      "name": "script_object",
+      "position": [
+        -112.25,
+        -144.5,
+        12.25
+      ],
+      "category": "script"
+    },
+    {
+      "name": "cAIFightPath",
+      "position": [
+        -112.25,
+        -144.5,
+        12.25
+      ],
+      "category": "other"
+    },
+    {
+      "name": "marinesidekick",
+      "position": [
+        -84.08,
+        -138.41,
+        15.5
+      ],
+      "category": "enemy"
+    },
+    {
+      "name": "overlord",
+      "position": [
+        -24.61,
+        -142.02,
+        8.12
+      ],
+      "category": "enemy"
+    },
+    {
+      "name": "cM121_OverlordUnload",
+      "position": [
+        -24.61,
+        -142.02,
+        8.12
+      ],
+      "category": "enemy"
+    },
+    {
+      "name": "t_track",
+      "position": [
+        -95.38,
+        -142.12,
+        14.12
+      ],
+      "category": "other"
+    },
+    {
+      "name": "marinesidekick",
+      "position": [
+        -85.95,
+        -135.03,
+        15.5
+      ],
+      "category": "enemy"
+    },
+    {
+      "name": "t_track",
+      "position": [
+        -95.62,
+        -138.12,
+        14.12
+      ],
+      "category": "other"
+    },
+    {
+      "name": "overlord",
+      "position": [
+        -24.36,
+        -106.89,
+        8.0
+      ],
+      "category": "enemy"
+    },
+    {
+      "name": "cM121_OverlordUnload",
+      "position": [
+        -24.36,
+        -106.89,
+        8.0
+      ],
+      "category": "enemy"
+    },
+    {
+      "name": "trigger_region",
+      "position": [
+        -74.42,
+        -170.29,
+        1.5
+      ],
+      "category": "trigger"
+    },
+    {
+      "name": "trigger",
+      "position": [
+        0.0,
+        -142.93,
+        -8.0
+      ],
+      "category": "trigger"
+    },
+    {
+      "name": "script_object",
+      "position": [
+        -49.5,
+        -168.25,
+        -1.0
+      ],
+      "category": "script"
+    },
+    {
+      "name": "trigger_region",
+      "position": [
+        -63.02,
+        -120.66,
+        12.25
+      ],
+      "category": "trigger"
+    },
+    {
+      "name": "trigger",
+      "position": [
+        0.0,
+        -134.25,
+        -28.0
+      ],
+      "category": "trigger"
+    },
+    {
+      "name": "trigger_region",
+      "position": [
+        -49.56,
+        -112.01,
+        9.75
+      ],
+      "category": "trigger"
+    },
+    {
+      "name": "trigger",
+      "position": [
+        0.0,
+        -104.25,
+        -23.0
+      ],
+      "category": "trigger"
+    },
+    {
+      "name": "script_object",
+      "position": [
+        -37.38,
+        -136.25,
+        10.0
+      ],
+      "category": "script"
+    },
+    {
+      "name": "script_object",
+      "position": [
+        -32.25,
+        -180.25,
+        -1.75
+      ],
+      "category": "script"
+    },
+    {
+      "name": "cAIFightPath",
+      "position": [
+        -32.25,
+        -180.25,
+        -1.75
+      ],
+      "category": "other"
+    },
+    {
+      "name": "script_object",
+      "position": [
+        -28.0,
+        -179.5,
+        -1.75
+      ],
+      "category": "script"
+    },
+    {
+      "name": "cAIFightPath",
+      "position": [
+        -28.0,
+        -179.5,
+        -1.75
+      ],
+      "category": "other"
+    },
+    {
+      "name": "script_object",
+      "position": [
+        -43.38,
+        -136.88,
+        10.0
+      ],
+      "category": "script"
+    },
+    {
+      "name": "script_object",
+      "position": [
+        -35.38,
+        -123.5,
+        10.0
+      ],
+      "category": "script"
+    },
+    {
+      "name": "doorMetal01.nag",
+      "position": [
+        -59.58,
+        -104.55,
+        10.88
+      ],
+      "category": "door"
+    },
+    {
+      "name": "doorMetal01.nag",
+      "position": [
+        -80.95,
+        -127.92,
+        15.5
+      ],
+      "category": "door"
+    },
+    {
+      "name": "ladder_dynamic",
+      "position": [
+        -87.25,
+        -115.21,
+        13.81
+      ],
+      "category": "door"
+    },
+    {
+      "name": "ge_laddermain_01",
+      "position": [
+        -87.25,
+        -115.2,
+        11.88
+      ],
+      "category": "door"
+    },
+    {
+      "name": "ge_ladder1mx_01",
+      "position": [
+        -87.25,
+        -115.2,
+        10.88
+      ],
+      "category": "door"
+    },
+    {
+      "name": "script_object",
+      "position": [
+        -26.0,
+        -189.75,
+        6.38
+      ],
+      "category": "script"
+    },
+    {
+      "name": "script_object",
+      "position": [
+        16.5,
+        -108.5,
+        24.5
+      ],
+      "category": "script"
+    },
+    {
+      "name": "script_object",
+      "position": [
+        -71.88,
+        -63.88,
+        23.62
+      ],
+      "category": "script"
+    },
+    {
+      "name": "t_track",
+      "position": [
+        0.0,
+        -92.0,
+        -46.0
+      ],
+      "category": "other"
+    },
+    {
+      "name": "script_object",
+      "position": [
+        -76.88,
+        -199.25,
+        22.88
+      ],
+      "category": "script"
+    },
+    {
+      "name": "script_object",
+      "position": [
+        -128.75,
+        -171.75,
+        7.88
+      ],
+      "category": "script"
+    },
+    {
+      "name": "marinesidekick",
+      "position": [
+        -47.75,
+        -166.38,
+        -1.25
+      ],
+      "category": "enemy"
+    },
+    {
+      "name": "cBlastObj",
+      "position": [
+        0.0,
+        -90.0,
+        -47.75
+      ],
+      "category": "other"
+    },
+    {
+      "name": "marinesidekick",
+      "position": [
+        -53.25,
+        -164.62,
+        -1.25
+      ],
+      "category": "enemy"
+    },
+    {
+      "name": "cBlastObj",
+      "position": [
+        -53.25,
+        -164.62,
+        -1.25
+      ],
+      "category": "other"
+    },
+    {
+      "name": "cBlastObj",
+      "position": [
+        -49.0,
+        -165.0,
+        -2.25
+      ],
+      "category": "other"
+    },
+    {
+      "name": "cBlastObj",
+      "position": [
+        -52.19,
+        -165.0,
+        -2.25
+      ],
+      "category": "other"
+    },
+    {
+      "name": "cBlastObj",
+      "position": [
+        -46.33,
+        -165.0,
+        -2.25
+      ],
+      "category": "other"
+    },
+    {
+      "name": "powgauss_2x",
+      "position": [
+        -42.5,
+        -95.12,
+        -6.88
+      ],
+      "category": "pickup"
+    },
+    {
+      "name": "powgauss_2x",
+      "position": [
+        -41.5,
+        -95.12,
+        -6.88
+      ],
+      "category": "pickup"
+    },
+    {
+      "name": "playerclip_prop_hull",
+      "position": [
+        -58.75,
+        -126.75,
+        13.06
+      ],
+      "category": "prop"
+    },
+    {
+      "name": "playerclip",
+      "position": [
+        0.0,
+        -126.0,
+        -31.25
+      ],
+      "category": "other"
+    },
+    {
+      "name": "script_object",
+      "position": [
+        13.5,
+        -95.5,
+        23.5
+      ],
+      "category": "script"
+    },
+    {
+      "name": "script_target",
+      "position": [
+        -39.0,
+        -210.0,
+        38.0
+      ],
+      "category": "script"
+    },
+    {
+      "name": "script_object",
+      "position": [
+        -76.5,
+        -96.5,
+        45.5
+      ],
+      "category": "script"
+    },
+    {
+      "name": "trigger_region",
+      "position": [
+        -82.5,
+        -170.5,
+        1.5
+      ],
+      "category": "trigger"
+    },
+    {
+      "name": "trigger",
+      "position": [
+        0.0,
+        -160.25,
+        -8.0
+      ],
+      "category": "trigger"
+    },
+    {
+      "name": "trigger_region",
+      "position": [
+        -79.36,
+        -140.95,
+        17.5
+      ],
+      "category": "trigger"
+    },
+    {
+      "name": "trigger",
+      "position": [
+        0.0,
+        -166.11,
+        -40.0
+      ],
+      "category": "trigger"
+    },
+    {
+      "name": "script_object",
+      "position": [
+        -40.62,
+        -123.12,
+        10.0
+      ],
+      "category": "script"
+    },
+    {
+      "name": "script_object",
+      "position": [
+        -125.0,
+        -145.12,
+        29.0
+      ],
+      "category": "script"
+    },
+    {
+      "name": "script_object",
+      "position": [
+        -119.12,
+        -148.12,
+        29.0
+      ],
+      "category": "script"
+    },
+    {
+      "name": "script_object",
+      "position": [
+        -45.12,
+        -143.62,
+        9.75
+      ],
+      "category": "script"
+    },
+    {
+      "name": "trigger_region",
+      "position": [
+        -85.09,
+        -119.73,
+        17.5
+      ],
+      "category": "trigger"
+    },
+    {
+      "name": "trigger",
+      "position": [
+        0.0,
+        -175.02,
+        -40.0
+      ],
+      "category": "trigger"
+    },
+    {
+      "name": "marinesidekick",
+      "position": [
+        -84.08,
+        -119.16,
+        15.5
+      ],
+      "category": "enemy"
+    },
+    {
+      "name": "marinesidekick",
+      "position": [
+        -42.2,
+        -91.28,
+        -7.0
+      ],
+      "category": "enemy"
+    },
+    {
+      "name": "trigger_region",
+      "position": [
+        -44.0,
+        -89.5,
+        -5.25
+      ],
+      "category": "trigger"
+    },
+    {
+      "name": "trigger",
+      "position": [
+        0.0,
+        -94.0,
+        5.0
+      ],
+      "category": "trigger"
+    },
+    {
+      "name": "script_object",
+      "position": [
+        -38.0,
+        -123.5,
+        9.75
+      ],
+      "category": "script"
+    },
+    {
+      "name": "trigger_region",
+      "position": [
+        -33.88,
+        -94.38,
+        -5.88
+      ],
+      "category": "trigger"
+    },
+    {
+      "name": "trigger",
+      "position": [
+        0.0,
+        -70.0,
+        7.5
+      ],
+      "category": "trigger"
+    },
+    {
+      "name": "script_object",
+      "position": [
+        -131.25,
+        -139.88,
+        29.0
+      ],
+      "category": "script"
+    },
+    {
+      "name": "marinesidekick",
+      "position": [
+        -21.45,
+        -129.16,
+        -2.48
+      ],
+      "category": "enemy"
+    },
+    {
+      "name": "cActorWalk",
+      "position": [
+        -21.45,
+        -129.16,
+        -2.48
+      ],
+      "category": "other"
+    },
+    {
+      "name": "marinesidekick",
+      "position": [
+        -22.95,
+        -136.03,
+        -2.48
+      ],
+      "category": "enemy"
+    },
+    {
+      "name": "cActorWalk",
+      "position": [
+        -22.95,
+        -136.03,
+        -2.48
+      ],
+      "category": "other"
+    },
+    {
+      "name": "marinesidekick",
+      "position": [
+        -24.58,
+        -122.41,
+        -2.48
+      ],
+      "category": "enemy"
+    },
+    {
+      "name": "cActorWalk",
+      "position": [
+        -24.58,
+        -122.41,
+        -2.48
+      ],
+      "category": "other"
+    },
+    {
+      "name": "trigger_region",
+      "position": [
+        -81.69,
+        -170.25,
+        1.5
+      ],
+      "category": "trigger"
+    },
+    {
+      "name": "trigger",
+      "position": [
+        0.0,
+        -158.5,
+        -8.0
+      ],
+      "category": "trigger"
+    },
+    {
+      "name": "ge_footlocker_grn_gauss",
+      "position": [
+        -79.0,
+        -113.38,
+        15.5
+      ],
+      "category": "pickup"
+    },
+    {
+      "name": "ge_footlocker_grn_health",
+      "position": [
+        -92.75,
+        -112.75,
+        15.5
+      ],
+      "category": "pickup"
+    },
+    {
+      "name": "ge_footlocker_grn_spider",
+      "position": [
+        -54.12,
+        -120.0,
+        15.5
+      ],
+      "category": "pickup"
+    },
+    {
+      "name": "ge_footlocker_grn_spider",
+      "position": [
+        -53.5,
+        -121.0,
+        15.5
+      ],
+      "category": "pickup"
+    },
+    {
+      "name": "trigger_region",
+      "position": [
+        -79.88,
+        -140.8,
+        17.5
+      ],
+      "category": "trigger"
+    },
+    {
+      "name": "trigger",
+      "position": [
+        0.0,
+        -167.22,
+        -40.0
+      ],
+      "category": "trigger"
+    },
+    {
+      "name": "doorMetal01.nag",
+      "position": [
+        -77.95,
+        -142.42,
+        18.5
+      ],
+      "category": "door"
+    },
+    {
+      "name": "movetrack_nocfile",
+      "position": [
+        -45.7,
+        -110.92,
+        8.38
+      ],
+      "category": "geometry"
+    },
+    {
+      "name": "doorMetal01.nag",
+      "position": [
+        -45.7,
+        -110.92,
+        8.38
+      ],
+      "category": "door"
+    },
+    {
+      "name": "movetrack_nocfile",
+      "position": [
+        -47.52,
+        -107.8,
+        8.38
+      ],
+      "category": "geometry"
+    },
+    {
+      "name": "doorMetal01.nag",
+      "position": [
+        -47.52,
+        -107.8,
+        8.38
+      ],
+      "category": "door"
+    },
+    {
+      "name": "script_target",
+      "position": [
+        -90.5,
+        -144.5,
+        18.0
+      ],
+      "category": "script"
+    },
+    {
+      "name": "script_target",
+      "position": [
+        -89.5,
+        -144.5,
+        18.0
+      ],
+      "category": "script"
+    },
+    {
+      "name": "firelarge",
+      "position": [
+        -53.34,
+        -91.22,
+        8.41
+      ],
+      "category": "other"
+    },
+    {
+      "name": "firehuge",
+      "position": [
+        -73.97,
+        -159.19,
+        0.06
+      ],
+      "category": "other"
+    },
+    {
+      "name": "ghost",
+      "position": [
+        -66.71,
+        -175.51,
+        9.65
+      ],
+      "category": "other"
+    },
+    {
+      "name": "ghost",
+      "position": [
+        -64.95,
+        -174.45,
+        9.7
+      ],
+      "category": "other"
+    },
+    {
+      "name": "ghost",
+      "position": [
+        -66.89,
+        -175.47,
+        9.48
+      ],
+      "category": "other"
+    },
+    {
+      "name": "ghost",
+      "position": [
+        -64.91,
+        -174.27,
+        9.48
+      ],
+      "category": "other"
+    },
+    {
+      "name": "ghost",
+      "position": [
+        -75.82,
+        -160.43,
+        17.61
+      ],
+      "category": "other"
+    },
+    {
+      "name": "ghost",
+      "position": [
+        -75.75,
+        -160.59,
+        17.42
+      ],
+      "category": "other"
+    },
+    {
+      "name": "ghost",
+      "position": [
+        -67.16,
+        -157.26,
+        17.59
+      ],
+      "category": "other"
+    },
+    {
+      "name": "ghost",
+      "position": [
+        -67.11,
+        -157.44,
+        17.41
+      ],
+      "category": "other"
+    },
+    {
+      "name": "ghost",
+      "position": [
+        -74.31,
+        -159.03,
+        1.5
+      ],
+      "category": "other"
+    },
+    {
+      "name": "ghost",
+      "position": [
+        -36.7,
+        -170.24,
+        8.07
+      ],
+      "category": "other"
+    },
+    {
+      "name": "ghost",
+      "position": [
+        -36.86,
+        -170.25,
+        7.91
+      ],
+      "category": "other"
+    },
+    {
+      "name": "ghost",
+      "position": [
+        -36.7,
+        -160.24,
+        8.07
+      ],
+      "category": "other"
+    },
+    {
+      "name": "ghost",
+      "position": [
+        -36.86,
+        -160.25,
+        7.91
+      ],
+      "category": "other"
+    },
+    {
+      "name": "ghost",
+      "position": [
+        -10.69,
+        -151.44,
+        6.86
+      ],
+      "category": "other"
+    },
+    {
+      "name": "ghost",
+      "position": [
+        -9.91,
+        -149.22,
+        6.86
+      ],
+      "category": "other"
+    },
+    {
+      "name": "ghost",
+      "position": [
+        -19.4,
+        -99.54,
+        5.29
+      ],
+      "category": "other"
+    },
+    {
+      "name": "ghost",
+      "position": [
+        -19.41,
+        -99.7,
+        5.17
+      ],
+      "category": "other"
+    },
+    {
+      "name": "ghost",
+      "position": [
+        -20.52,
+        -99.54,
+        5.29
+      ],
+      "category": "other"
+    },
+    {
+      "name": "ghost",
+      "position": [
+        -20.53,
+        -99.7,
+        5.17
+      ],
+      "category": "other"
+    },
+    {
+      "name": "ghost",
+      "position": [
+        -35.35,
+        -99.54,
+        5.29
+      ],
+      "category": "other"
+    },
+    {
+      "name": "ghost",
+      "position": [
+        -35.36,
+        -99.7,
+        5.17
+      ],
+      "category": "other"
+    },
+    {
+      "name": "ghost",
+      "position": [
+        -36.48,
+        -99.54,
+        5.29
+      ],
+      "category": "other"
+    },
+    {
+      "name": "ghost",
+      "position": [
+        -36.48,
+        -99.7,
+        5.17
+      ],
+      "category": "other"
+    },
+    {
+      "name": "ghost",
+      "position": [
+        -69.01,
+        -140.46,
+        22.07
+      ],
+      "category": "other"
+    },
+    {
+      "name": "ghost",
+      "position": [
+        -68.83,
+        -140.36,
+        21.88
+      ],
+      "category": "other"
+    },
+    {
+      "name": "ghost",
+      "position": [
+        -69.51,
+        -142.34,
+        22.07
+      ],
+      "category": "other"
+    },
+    {
+      "name": "ghost",
+      "position": [
+        -69.39,
+        -142.53,
+        21.88
+      ],
+      "category": "other"
+    },
+    {
+      "name": "ghost",
+      "position": [
+        -10.05,
+        -112.76,
+        7.03
+      ],
+      "category": "other"
+    },
+    {
+      "name": "ghost",
+      "position": [
+        -10.43,
+        -110.81,
+        7.06
+      ],
+      "category": "other"
+    },
+    {
+      "name": "ghost",
+      "position": [
+        -10.16,
+        -112.92,
+        6.86
+      ],
+      "category": "other"
+    },
+    {
+      "name": "ghost",
+      "position": [
+        -10.62,
+        -110.7,
+        6.84
+      ],
+      "category": "other"
+    },
+    {
+      "name": "ghost",
+      "position": [
+        -48.62,
+        -115.45,
+        18.2
+      ],
+      "category": "other"
+    },
+    {
+      "name": "ghost",
+      "position": [
+        -48.64,
+        -115.28,
+        17.98
+      ],
+      "category": "other"
+    },
+    {
+      "name": "ghost",
+      "position": [
+        -47.05,
+        -116.68,
+        18.2
+      ],
+      "category": "other"
+    },
+    {
+      "name": "ghost",
+      "position": [
+        -46.88,
+        -116.67,
+        17.98
+      ],
+      "category": "other"
+    },
+    {
+      "name": "ghost",
+      "position": [
+        -41.74,
+        -110.02,
+        12.32
+      ],
+      "category": "other"
+    },
+    {
+      "name": "ghost",
+      "position": [
+        -41.56,
+        -109.92,
+        12.12
+      ],
+      "category": "other"
+    },
+    {
+      "name": "ghost",
+      "position": [
+        -46.32,
+        -102.06,
+        12.32
+      ],
+      "category": "other"
+    },
+    {
+      "name": "ghost",
+      "position": [
+        -46.14,
+        -101.95,
+        12.12
+      ],
+      "category": "other"
+    },
+    {
+      "name": "ghost",
+      "position": [
+        -53.25,
+        -91.02,
+        9.61
+      ],
+      "category": "other"
+    },
+    {
+      "name": "ghost",
+      "position": [
+        -83.29,
+        -162.21,
+        9.65
+      ],
+      "category": "other"
+    },
+    {
+      "name": "ghost",
+      "position": [
+        -83.08,
+        -162.28,
+        9.48
+      ],
+      "category": "other"
+    },
+    {
+      "name": "ghost",
+      "position": [
+        -84.87,
+        -163.34,
+        9.65
+      ],
+      "category": "other"
+    },
+    {
+      "name": "ghost",
+      "position": [
+        -84.92,
+        -163.56,
+        9.48
+      ],
+      "category": "other"
+    },
+    {
+      "name": "ghost",
+      "position": [
+        -97.7,
+        -146.77,
+        23.11
+      ],
+      "category": "other"
+    },
+    {
+      "name": "ghost",
+      "position": [
+        -95.74,
+        -146.32,
+        23.15
+      ],
+      "category": "other"
+    },
+    {
+      "name": "ghost",
+      "position": [
+        -97.83,
+        -146.67,
+        22.94
+      ],
+      "category": "other"
+    },
+    {
+      "name": "ghost",
+      "position": [
+        -95.62,
+        -146.12,
+        22.94
+      ],
+      "category": "other"
+    },
+    {
+      "name": "playerclip_prop_hull",
+      "position": [
+        -71.63,
+        -156.32,
+        10.69
+      ],
+      "category": "prop"
+    },
+    {
+      "name": "playerclip",
+      "position": [
+        0.0,
+        -149.02,
+        -43.5
+      ],
+      "category": "other"
+    },
+    {
+      "name": "script_target",
+      "position": [
+        -89.5,
+        -143.5,
+        18.0
+      ],
+      "category": "script"
+    },
+    {
+      "name": "script_target",
+      "position": [
+        -89.5,
+        -142.5,
+        18.0
+      ],
+      "category": "script"
+    },
+    {
+      "name": "firelarge",
+      "position": [
+        -76.09,
+        -105.22,
+        11.78
+      ],
+      "category": "other"
+    },
+    {
+      "name": "ghost",
+      "position": [
+        -76.0,
+        -105.02,
+        12.98
+      ],
+      "category": "other"
+    },
+    {
+      "name": "ghost",
+      "position": [
+        -78.69,
+        -131.56,
+        20.62
+      ],
+      "category": "other"
+    },
+    {
+      "name": "ghost",
+      "position": [
+        -77.69,
+        -147.09,
+        20.62
+      ],
+      "category": "other"
+    },
+    {
+      "name": "halo_white_dim",
+      "position": [
+        -77.69,
+        -147.09,
+        20.42
+      ],
+      "category": "other"
+    },
+    {
+      "name": "halo_white_dim",
+      "position": [
+        -83.78,
+        -134.47,
+        20.42
+      ],
+      "category": "other"
+    },
+    {
+      "name": "halo_white_dim",
+      "position": [
+        -78.69,
+        -131.56,
+        20.42
+      ],
+      "category": "other"
+    },
+    {
+      "name": "ghost",
+      "position": [
+        -83.03,
+        -127.12,
+        21.47
+      ],
+      "category": "other"
+    },
+    {
+      "name": "halo_white_dim",
+      "position": [
+        -83.03,
+        -127.12,
+        21.27
+      ],
+      "category": "other"
+    },
+    {
+      "name": "ghost",
+      "position": [
+        -85.44,
+        -109.97,
+        20.53
+      ],
+      "category": "other"
+    },
+    {
+      "name": "halo_white_dim",
+      "position": [
+        -85.44,
+        -109.97,
+        20.33
+      ],
+      "category": "other"
+    },
+    {
+      "name": "ghost",
+      "position": [
+        -82.81,
+        -108.69,
+        20.53
+      ],
+      "category": "other"
+    },
+    {
+      "name": "halo_white_dim",
+      "position": [
+        -82.81,
+        -108.69,
+        20.33
+      ],
+      "category": "other"
+    },
+    {
+      "name": "ghost",
+      "position": [
+        -64.61,
+        -121.91,
+        20.53
+      ],
+      "category": "other"
+    },
+    {
+      "name": "halo_white_dim",
+      "position": [
+        -64.61,
+        -121.91,
+        20.33
+      ],
+      "category": "other"
+    },
+    {
+      "name": "ghost",
+      "position": [
+        -62.27,
+        -120.08,
+        20.53
+      ],
+      "category": "other"
+    },
+    {
+      "name": "halo_white_dim",
+      "position": [
+        -62.27,
+        -120.08,
+        20.33
+      ],
+      "category": "other"
+    },
+    {
+      "name": "ghost",
+      "position": [
+        -59.73,
+        -118.55,
+        20.53
+      ],
+      "category": "other"
+    },
+    {
+      "name": "halo_white_dim",
+      "position": [
+        -59.73,
+        -118.55,
+        20.33
+      ],
+      "category": "other"
+    },
+    {
+      "name": "ghost",
+      "position": [
+        -59.25,
+        -108.73,
+        15.34
+      ],
+      "category": "other"
+    },
+    {
+      "name": "halo_white_dim",
+      "position": [
+        -59.25,
+        -108.73,
+        15.14
+      ],
+      "category": "other"
+    },
+    {
+      "name": "ghost",
+      "position": [
+        -32.06,
+        -91.09,
+        0.83
+      ],
+      "category": "other"
+    },
+    {
+      "name": "halo_white_dim",
+      "position": [
+        -32.06,
+        -91.09,
+        0.62
+      ],
+      "category": "other"
+    },
+    {
+      "name": "ghost",
+      "position": [
+        -29.16,
+        -91.08,
+        0.83
+      ],
+      "category": "other"
+    },
+    {
+      "name": "halo_white_dim",
+      "position": [
+        -29.16,
+        -91.08,
+        0.62
+      ],
+      "category": "other"
+    },
+    {
+      "name": "ghost",
+      "position": [
+        -29.12,
+        -94.27,
+        0.83
+      ],
+      "category": "other"
+    },
+    {
+      "name": "halo_white_dim",
+      "position": [
+        -29.12,
+        -94.27,
+        0.62
+      ],
+      "category": "other"
+    },
+    {
+      "name": "ghost",
+      "position": [
+        -32.09,
+        -94.27,
+        0.83
+      ],
+      "category": "other"
+    },
+    {
+      "name": "halo_white_dim",
+      "position": [
+        -32.09,
+        -94.27,
+        0.62
+      ],
+      "category": "other"
+    },
+    {
+      "name": "ghost",
+      "position": [
+        -39.25,
+        -94.27,
+        0.83
+      ],
+      "category": "other"
+    },
+    {
+      "name": "halo_white_dim",
+      "position": [
+        -39.25,
+        -94.27,
+        0.62
+      ],
+      "category": "other"
+    },
+    {
+      "name": "ghost",
+      "position": [
+        -43.42,
+        -94.22,
+        0.83
+      ],
+      "category": "other"
+    },
+    {
+      "name": "halo_white_dim",
+      "position": [
+        -43.42,
+        -94.22,
+        0.62
+      ],
+      "category": "other"
+    },
+    {
+      "name": "ghost",
+      "position": [
+        -18.51,
+        -129.87,
+        1.73
+      ],
+      "category": "other"
+    },
+    {
+      "name": "ghost",
+      "position": [
+        -26.93,
+        -129.87,
+        1.72
+      ],
+      "category": "other"
+    },
+    {
+      "name": "ghost",
+      "position": [
+        -18.64,
+        -129.88,
+        1.55
+      ],
+      "category": "other"
+    },
+    {
+      "name": "ghost",
+      "position": [
+        -26.78,
+        -129.88,
+        1.55
+      ],
+      "category": "other"
+    },
+    {
+      "name": "playerclip_prop_hull",
+      "position": [
+        -87.0,
+        -138.0,
+        18.06
+      ],
+      "category": "prop"
+    },
+    {
+      "name": "playerclip",
+      "position": [
+        0.0,
+        -171.0,
+        -41.25
+      ],
+      "category": "other"
+    },
+    {
+      "name": "playerclip_prop_hull",
+      "position": [
+        -87.75,
+        -121.75,
+        18.06
+      ],
+      "category": "prop"
+    },
+    {
+      "name": "playerclip",
+      "position": [
+        0.0,
+        -175.0,
+        -41.25
+      ],
+      "category": "other"
+    },
+    {
+      "name": "playerclip_prop_hull",
+      "position": [
+        -74.21,
+        -126.83,
+        17.81
+      ],
+      "category": "prop"
+    },
+    {
+      "name": "playerclip",
+      "position": [
+        0.0,
+        -143.85,
+        -41.25
+      ],
+      "category": "other"
+    },
+    {
+      "name": "playerclip_prop_hull",
+      "position": [
+        -77.0,
+        -157.5,
+        10.69
+      ],
+      "category": "prop"
+    },
+    {
+      "name": "playerclip",
+      "position": [
+        0.0,
+        -154.5,
+        -43.5
+      ],
+      "category": "other"
+    },
+    {
+      "name": "playerclip_prop_hull",
+      "position": [
+        -71.0,
+        -140.25,
+        17.19
+      ],
+      "category": "prop"
+    },
+    {
+      "name": "playerclip",
+      "position": [
+        0.0,
+        -142.5,
+        -45.5
+      ],
+      "category": "other"
+    },
+    {
+      "name": "playerclip_prop_hull",
+      "position": [
+        -51.31,
+        -97.31,
+        13.69
+      ],
+      "category": "prop"
+    },
+    {
+      "name": "playerclip",
+      "position": [
+        0.0,
+        -197.75,
+        -38.5
+      ],
+      "category": "other"
+    },
+    {
+      "name": "playerclip_prop_hull",
+      "position": [
+        -83.94,
+        -116.19,
+        13.31
+      ],
+      "category": "prop"
+    },
+    {
+      "name": "playerclip",
+      "position": [
+        0.0,
+        -181.0,
+        -31.25
+      ],
+      "category": "other"
+    },
+    {
+      "name": "playerclip_prop_hull",
+      "position": [
+        -92.19,
+        -114.5,
+        13.31
+      ],
+      "category": "prop"
+    },
+    {
+      "name": "playerclip",
+      "position": [
+        -0.0,
+        -182.0,
+        -31.25
+      ],
+      "category": "other"
+    },
+    {
+      "name": "playerclip_prop_hull",
+      "position": [
+        -88.13,
+        -129.31,
+        18.06
+      ],
+      "category": "prop"
+    },
+    {
+      "name": "playerclip_prop_hull",
+      "position": [
+        -79.44,
+        -125.25,
+        18.06
+      ],
+      "category": "prop"
+    },
+    {
+      "name": "playerclip",
+      "position": [
+        -0.0,
+        -249.25,
+        -41.25
+      ],
+      "category": "other"
+    },
+    {
+      "name": "playerclip_prop_hull",
+      "position": [
+        -74.31,
+        -130.69,
+        18.06
+      ],
+      "category": "prop"
+    },
+    {
+      "name": "playerclip_prop_hull",
+      "position": [
+        -75.25,
+        -138.75,
+        17.81
+      ],
+      "category": "prop"
+    },
+    {
+      "name": "playerclip_prop_hull",
+      "position": [
+        -51.56,
+        -91.04,
+        13.69
+      ],
+      "category": "prop"
+    },
+    {
+      "name": "playerclip",
+      "position": [
+        0.0,
+        -104.79,
+        -38.5
+      ],
+      "category": "other"
+    },
+    {
+      "name": "playerclip_prop_hull",
+      "position": [
+        -75.08,
+        -103.55,
+        16.06
+      ],
+      "category": "prop"
+    },
+    {
+      "name": "playerclip",
+      "position": [
+        -0.0,
+        -152.0,
+        -42.25
+      ],
+      "category": "other"
+    },
+    {
+      "name": "playerclip_prop_hull",
+      "position": [
+        -27.75,
+        -122.69,
+        1.0
+      ],
+      "category": "prop"
+    },
+    {
+      "name": "playerclip",
+      "position": [
+        0.0,
+        -54.0,
+        -8.0
+      ],
+      "category": "other"
+    },
+    {
+      "name": "playerclip_prop_hull",
+      "position": [
+        -17.75,
+        -122.69,
+        1.0
+      ],
+      "category": "prop"
+    },
+    {
+      "name": "playerclip",
+      "position": [
+        0.0,
+        -241.75,
+        4.0
+      ],
+      "category": "other"
+    },
+    {
+      "name": "playerclip_prop_hull",
+      "position": [
+        -17.75,
+        -136.94,
+        1.0
+      ],
+      "category": "prop"
+    },
+    {
+      "name": "playerclip_prop_hull",
+      "position": [
+        -27.75,
+        -136.94,
+        1.0
+      ],
+      "category": "prop"
+    },
+    {
+      "name": "playerclip",
+      "position": [
+        0.0,
+        -57.0,
+        -8.0
+      ],
+      "category": "other"
+    },
+    {
+      "name": "playerclip_prop_hull",
+      "position": [
+        -79.81,
+        -151.19,
+        17.56
+      ],
+      "category": "prop"
+    },
+    {
+      "name": "playerclip_prop_hull",
+      "position": [
+        -72.33,
+        -108.05,
+        16.06
+      ],
+      "category": "prop"
+    },
+    {
+      "name": "playerclip",
+      "position": [
+        -0.0,
+        -145.0,
+        -42.25
+      ],
+      "category": "other"
+    },
+    {
+      "name": "instance_nocfile",
+      "position": [
+        -76.17,
+        -137.73,
+        15.43
+      ],
+      "category": "geometry"
+    },
+    {
+      "name": "instance_nocfile",
+      "position": [
+        -86.56,
+        -128.95,
+        15.41
+      ],
+      "category": "geometry"
+    },
+    {
+      "name": "instance_nocfile",
+      "position": [
+        -79.66,
+        -125.3,
+        15.41
+      ],
+      "category": "geometry"
+    },
+    {
+      "name": "instance_nocfile",
+      "position": [
+        -75.44,
+        -105.91,
+        11.72
+      ],
+      "category": "geometry"
+    },
+    {
+      "name": "instance_nocfile",
+      "position": [
+        -66.08,
+        -117.25,
+        10.84
+      ],
+      "category": "geometry"
+    },
+    {
+      "name": "instance_nocfile",
+      "position": [
+        -52.63,
+        -92.03,
+        8.27
+      ],
+      "category": "geometry"
+    },
+    {
+      "name": "instance_nocfile",
+      "position": [
+        -84.61,
+        -162.01,
+        -0.5
+      ],
+      "category": "geometry"
+    },
+    {
+      "name": "instance_nocfile",
+      "position": [
+        -9.31,
+        -111.65,
+        -3.17
+      ],
+      "category": "geometry"
+    },
+    {
+      "name": "instance_nocfile",
+      "position": [
+        -65.33,
+        -175.78,
+        -0.5
+      ],
+      "category": "geometry"
+    },
+    {
+      "name": "instance_nocfile",
+      "position": [
+        -9.19,
+        -150.74,
+        -3.17
+      ],
+      "category": "geometry"
+    },
+    {
+      "name": "instance_nocfile",
+      "position": [
+        -48.42,
+        -116.79,
+        7.96
+      ],
+      "category": "geometry"
+    },
+    {
+      "name": "instance_nocfile",
+      "position": [
+        -96.51,
+        -147.44,
+        12.92
+      ],
+      "category": "geometry"
+    },
+    {
+      "name": "instance_nocfile",
+      "position": [
+        -120.24,
+        -153.52,
+        10.84
+      ],
+      "category": "geometry"
+    },
+    {
+      "name": "instance_nocfile",
+      "position": [
+        -70.46,
+        -140.95,
+        11.83
+      ],
+      "category": "geometry"
+    },
+    {
+      "name": "instance_nocfile",
+      "position": [
+        -62.74,
+        -148.03,
+        8.48
+      ],
+      "category": "geometry"
+    },
+    {
+      "name": "instance_nocfile",
+      "position": [
+        -67.41,
+        -136.9,
+        15.32
+      ],
+      "category": "geometry"
+    },
+    {
+      "name": "instance_nocfile",
+      "position": [
+        -77.69,
+        -147.08,
+        20.47
+      ],
+      "category": "geometry"
+    },
+    {
+      "name": "instance_nocfile",
+      "position": [
+        -83.79,
+        -134.45,
+        20.45
+      ],
+      "category": "geometry"
+    },
+    {
+      "name": "instance_nocfile",
+      "position": [
+        -78.71,
+        -131.57,
+        20.45
+      ],
+      "category": "geometry"
+    },
+    {
+      "name": "instance_nocfile",
+      "position": [
+        -83.04,
+        -127.12,
+        21.29
+      ],
+      "category": "geometry"
+    },
+    {
+      "name": "instance_nocfile",
+      "position": [
+        -85.46,
+        -109.98,
+        20.31
+      ],
+      "category": "geometry"
+    },
+    {
+      "name": "instance_nocfile",
+      "position": [
+        -82.82,
+        -108.69,
+        20.31
+      ],
+      "category": "geometry"
+    },
+    {
+      "name": "instance_nocfile",
+      "position": [
+        -64.64,
+        -121.86,
+        20.31
+      ],
+      "category": "geometry"
+    },
+    {
+      "name": "instance_nocfile",
+      "position": [
+        -62.29,
+        -120.04,
+        20.28
+      ],
+      "category": "geometry"
+    },
+    {
+      "name": "instance_nocfile",
+      "position": [
+        -59.25,
+        -108.72,
+        15.16
+      ],
+      "category": "geometry"
+    },
+    {
+      "name": "instance_nocfile",
+      "position": [
+        -26.86,
+        -129.85,
+        1.57
+      ],
+      "category": "geometry"
+    },
+    {
+      "name": "instance_nocfile",
+      "position": [
+        -18.6,
+        -129.85,
+        1.59
+      ],
+      "category": "geometry"
+    },
+    {
+      "name": "instance_nocfile",
+      "position": [
+        -39.25,
+        -94.26,
+        0.65
+      ],
+      "category": "geometry"
+    },
+    {
+      "name": "instance_nocfile",
+      "position": [
+        -43.44,
+        -94.22,
+        0.65
+      ],
+      "category": "geometry"
+    },
+    {
+      "name": "instance_nocfile",
+      "position": [
+        -32.1,
+        -94.26,
+        0.65
+      ],
+      "category": "geometry"
+    },
+    {
+      "name": "instance_nocfile",
+      "position": [
+        -32.91,
+        -183.97,
+        6.04
+      ],
+      "category": "geometry"
+    },
+    {
+      "name": "instance_nocfile",
+      "position": [
+        -25.09,
+        -183.97,
+        6.04
+      ],
+      "category": "geometry"
+    },
+    {
+      "name": "instance_nocfile",
+      "position": [
+        -59.75,
+        -118.54,
+        20.28
+      ],
+      "category": "geometry"
+    },
+    {
+      "name": "instance_nocfile",
+      "position": [
+        -29.14,
+        -94.26,
+        0.65
+      ],
+      "category": "geometry"
+    },
+    {
+      "name": "instance_nocfile",
+      "position": [
+        -32.07,
+        -91.09,
+        0.65
+      ],
+      "category": "geometry"
+    },
+    {
+      "name": "instance_nocfile",
+      "position": [
+        -29.16,
+        -91.07,
+        0.65
+      ],
+      "category": "geometry"
+    },
+    {
+      "name": "instance_nocfile",
+      "position": [
+        -61.11,
+        -104.69,
+        14.74
+      ],
+      "category": "geometry"
+    },
+    {
+      "name": "playerclip_prop_hull",
+      "position": [
+        -84.25,
+        -141.13,
+        17.94
+      ],
+      "category": "prop"
+    },
+    {
+      "name": "playerclip_prop_hull",
+      "position": [
+        -87.75,
+        -133.13,
+        17.94
+      ],
+      "category": "prop"
+    },
+    {
+      "name": "playerclip_prop_hull",
+      "position": [
+        -66.12,
+        -147.09,
+        16.69
+      ],
+      "category": "prop"
+    },
+    {
+      "name": "playerclip_prop_hull",
+      "position": [
+        -65.66,
+        -147.92,
+        16.69
+      ],
+      "category": "prop"
+    },
+    {
+      "name": "playerclip_prop_hull",
+      "position": [
+        -43.69,
+        -113.62,
+        13.69
+      ],
+      "category": "prop"
+    },
+    {
+      "name": "playerclip",
+      "position": [
+        0.0,
+        -89.0,
+        -38.5
+      ],
+      "category": "other"
+    },
+    {
+      "name": "playerclip_prop_hull",
+      "position": [
+        -49.5,
+        -118.0,
+        13.69
+      ],
+      "category": "prop"
+    },
+    {
+      "name": "playerclip",
+      "position": [
+        0.0,
+        -102.5,
+        -38.5
+      ],
+      "category": "other"
+    },
+    {
+      "name": "playerclip_prop_hull",
+      "position": [
+        -44.37,
+        -117.62,
+        13.69
+      ],
+      "category": "prop"
+    },
+    {
+      "name": "playerclip",
+      "position": [
+        0.0,
+        -84.0,
+        -38.5
+      ],
+      "category": "other"
+    }
+  ]
+}

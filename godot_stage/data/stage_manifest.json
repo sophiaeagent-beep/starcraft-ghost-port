@@ -1,0 +1,17 @@
+{
+  "created_utc": "2026-02-19T02:46:17.457345+00:00",
+  "project": "/home/scott/Games/xemu/ghost_port/godot_stage",
+  "stage_mode": "symlink",
+  "model_manifest": "/home/scott/Games/xemu/ghost_port/out/model_stubs_starcraft_ghost/manifests/model_stub_manifest.json",
+  "audio_manifest": "/home/scott/Games/xemu/ghost_port/out/audio_bridge/manifests/audio_manifest.json",
+  "models_staged": 1406,
+  "audio_staged": 2604,
+  "run_scene": "level1",
+  "selection": {
+    "max_models": 0,
+    "max_audio": 0,
+    "include_pointcloud": true,
+    "include_fallback": true
+  },
+  "run_hint": "/home/scott/Applications/Godot_v4.3-stable_linux.x86_64 --path /home/scott/Games/xemu/ghost_port/godot_stage"
+}
