@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://dpnr6fw3q1xc8"]
+
+[ext_resource type="Script" path="res://scripts/player_controller.gd" id="1_player"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_col"]
+radius = 0.4
+height = 1.8
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_player")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+shape = SubResource("CapsuleShape3D_col")
+
+[node name="ModelRoot" type="Node3D" parent="."]
+
+[node name="CameraPivot" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="Camera3D" type="Camera3D" parent="CameraPivot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
+fov = 70.0
+far = 800.0
+
+[node name="Flashlight" type="SpotLight3D" parent="CameraPivot/Camera3D"]
+visible = false
+light_color = Color(0.95, 0.92, 0.85, 1)
+light_energy = 3.0
+spot_range = 30.0
+spot_angle = 25.0

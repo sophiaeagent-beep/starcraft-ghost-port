@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://c0e2q5rj3ypk1"]
+
+[ext_resource type="Script" path="res://scripts/nil_level_loader.gd" id="1_loader"]
+
+[node name="Level_1_2_1" type="Node3D"]
+script = ExtResource("1_loader")
+
+[node name="LevelGeometry" type="Node3D" parent="."]
+
+[node name="FreeFlyCamera" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20, 40)
+fov = 75.0
+far = 1000.0
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="InfoLabel" type="Label" parent="HUD"]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 600.0
+offset_bottom = 250.0
+theme_override_colors/font_color = Color(0.85, 0.9, 0.85, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.8)
+theme_override_font_sizes/font_size = 14
+text = "Loading level..."

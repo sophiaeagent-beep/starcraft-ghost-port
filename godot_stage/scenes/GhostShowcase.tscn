@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/ghost_showcase.gd" id="1_script"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_ground"]
+size = Vector3(80, 0.2, 80)
+
+[node name="GhostShowcase" type="Node3D"]
+script = ExtResource("1_script")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, 18)
+fov = 60.0
+near = 0.1
+far = 200.0
+
+[node name="Models" type="Node3D" parent="."]
+
+[node name="Ground" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+mesh = SubResource("BoxMesh_ground")
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="InfoPanel" type="PanelContainer" parent="HUD"]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 400.0
+offset_bottom = 280.0
+
+[node name="InfoLabel" type="Label" parent="HUD/InfoPanel"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.85, 0.9, 1)
+theme_override_font_sizes/font_size = 14
+text = "Loading..."

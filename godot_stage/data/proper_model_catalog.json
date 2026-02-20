@@ -1,0 +1,318 @@
+[
+  {
+    "name": "121_Trench3Way_01",
+    "resource_path": "res://assets/models_test/121_Trench3Way_01.gltf",
+    "mode": "triangle",
+    "vertex_count": 944,
+    "triangle_count": 1294,
+    "material_count": 4,
+    "materials": [
+      "MS_Trench_Beam",
+      "MS_Trench_Sandbags",
+      "MS_Ground_Dark",
+      "MS_TrenchFloor_Grate"
+    ],
+    "stride": 32
+  },
+  {
+    "name": "121_TrenchBridge_01",
+    "resource_path": "res://assets/models_test/121_TrenchBridge_01.gltf",
+    "mode": "triangle",
+    "vertex_count": 300,
+    "triangle_count": 456,
+    "material_count": 3,
+    "materials": [
+      "MS_BridgeEdge",
+      "MS_BridgeFloor",
+      "MS_BridgeFloor_02"
+    ],
+    "stride": 32
+  },
+  {
+    "name": "121_TrenchCap_01",
+    "resource_path": "res://assets/models_test/121_TrenchCap_01.gltf",
+    "mode": "triangle",
+    "vertex_count": 279,
+    "triangle_count": 364,
+    "material_count": 4,
+    "materials": [
+      "MS_Trench_Beam",
+      "MS_Trench_Sandbags",
+      "MS_Ground_Dark",
+      "MS_TrenchFloor_Grate"
+    ],
+    "stride": 32
+  },
+  {
+    "name": "121_TrenchCorner_01",
+    "resource_path": "res://assets/models_test/121_TrenchCorner_01.gltf",
+    "mode": "triangle",
+    "vertex_count": 601,
+    "triangle_count": 859,
+    "material_count": 4,
+    "materials": [
+      "MS_Trench_Beam",
+      "MS_Trench_Sandbags",
+      "MS_Ground_Dark",
+      "MS_TrenchFloor_Grate"
+    ],
+    "stride": 32
+  },
+  {
+    "name": "121_TrenchLong_01",
+    "resource_path": "res://assets/models_test/121_TrenchLong_01.gltf",
+    "mode": "triangle",
+    "vertex_count": 582,
+    "triangle_count": 814,
+    "material_count": 4,
+    "materials": [
+      "MS_Trench_Beam",
+      "MS_Trench_Sandbags",
+      "MS_Ground_Dark",
+      "MS_TrenchFloor_Grate"
+    ],
+    "stride": 32
+  },
+  {
+    "name": "121_TrenchShort_01",
+    "resource_path": "res://assets/models_test/121_TrenchShort_01.gltf",
+    "mode": "triangle",
+    "vertex_count": 294,
+    "triangle_count": 407,
+    "material_count": 4,
+    "materials": [
+      "MS_Trench_Beam",
+      "MS_Trench_Sandbags",
+      "MS_Ground_Dark",
+      "MS_TrenchFloor_Grate"
+    ],
+    "stride": 32
+  },
+  {
+    "name": "GhostGrenade",
+    "resource_path": "res://assets/models_test/GhostGrenade.gltf",
+    "mode": "triangle",
+    "vertex_count": 152,
+    "triangle_count": 222,
+    "material_count": 3,
+    "materials": [
+      "novaGrenade_gloss",
+      "novaGrenade_lights",
+      "novaGrenade_glo"
+    ],
+    "stride": 32
+  },
+  {
+    "name": "Ghost_male",
+    "resource_path": "res://assets/models_test/Ghost_male.gltf",
+    "mode": "skinned",
+    "vertex_count": 1382,
+    "triangle_count": 4862,
+    "material_count": 5,
+    "materials": [
+      "Ghost_male_gloss",
+      "Ghost_male_scan",
+      "Ghost_male_glow",
+      "GhostRifleNEW_gloss",
+      "GhostRifleNEW_glo"
+    ],
+    "stride": 48
+  },
+  {
+    "name": "Zealot",
+    "resource_path": "res://assets/models_test/Zealot.gltf",
+    "mode": "skinned",
+    "vertex_count": 1031,
+    "triangle_count": 5466,
+    "material_count": 11,
+    "materials": [
+      "zealotBattle_hot",
+      "zealotBattle_gloss",
+      "ProtossTorso",
+      "ProtossCorpse",
+      "zealotBattle_glow",
+      "zealotBattle_shoulder_R",
+      "zealotBattle_arc_R",
+      "zealotBattle_chestplate",
+      "zealotBattle_arc_L",
+      "zealotBattle_scan_gloss",
+      "zealotBattle_scan_glow"
+    ],
+    "stride": 48
+  },
+  {
+    "name": "battlecruiser",
+    "resource_path": "res://assets/models_test/battlecruiser.gltf",
+    "mode": "triangle",
+    "vertex_count": 7619,
+    "triangle_count": 10409,
+    "material_count": 2,
+    "materials": [
+      "Battlecruiser_glo",
+      "BattlecruiserHull"
+    ],
+    "stride": 32
+  },
+  {
+    "name": "firebat_elite",
+    "resource_path": "res://assets/models_test/firebat_elite.gltf",
+    "mode": "skinned",
+    "vertex_count": 1225,
+    "triangle_count": 4239,
+    "material_count": 4,
+    "materials": [
+      "firebat",
+      "eliteFirebat_gloss",
+      "firebat_flam",
+      "eliteFirebat_full"
+    ],
+    "stride": 48
+  },
+  {
+    "name": "gaussRifle_1",
+    "resource_path": "res://assets/models_test/gaussRifle_1.gltf",
+    "mode": "skinned",
+    "vertex_count": 984,
+    "triangle_count": 1869,
+    "material_count": 3,
+    "materials": [
+      "NovaReduxFinal_gloss",
+      "GhostRifleNEW2_gloss",
+      "GhostRifleNEW2_glo"
+    ],
+    "stride": 48
+  },
+  {
+    "name": "goliath_boss",
+    "resource_path": "res://assets/models_test/goliath_boss.gltf",
+    "mode": "skinned",
+    "vertex_count": 3931,
+    "triangle_count": 7842,
+    "material_count": 8,
+    "materials": [
+      "Goliath_boss_gloss",
+      "Goliath_boss_full",
+      "Goliath_boss_panel_R",
+      "GE_LockDownCircuit_01",
+      "GE_stripLights_01_slow",
+      "GE_stripLights_01_glo",
+      "Goliath_boss_panel_L",
+      "Goliath_boss_panel_C"
+    ],
+    "stride": 48
+  },
+  {
+    "name": "hydralisk",
+    "resource_path": "res://assets/models_test/hydralisk.gltf",
+    "mode": "skinned",
+    "vertex_count": 839,
+    "triangle_count": 2311,
+    "material_count": 8,
+    "materials": [
+      "hydralisk_gloss",
+      "Hydralisk_scan_gloss",
+      "Hydralisk_full",
+      "hydralisk_user2",
+      "hydralisk_user3",
+      "hydralisk_user1",
+      "HydraChest",
+      "invisible_scan"
+    ],
+    "stride": 48
+  },
+  {
+    "name": "marine1_elite",
+    "resource_path": "res://assets/models_test/marine1_elite.gltf",
+    "mode": "skinned",
+    "vertex_count": 2277,
+    "triangle_count": 4823,
+    "material_count": 11,
+    "materials": [
+      "eliteMarine_gloss",
+      "Marine1",
+      "eliteMarine_padRight",
+      "eliteMarine_gun",
+      "eliteMarine_faceshield",
+      "eliteMarine_padLeft",
+      "eliteMarine_lightpost",
+      "BattleMarine_full1",
+      "BattleMarine_full0",
+      "eliteMarine_full",
+      "eliteMarine_buttflap"
+    ],
+    "stride": 48
+  },
+  {
+    "name": "nova",
+    "resource_path": "res://assets/models_test/nova.gltf",
+    "mode": "skinned",
+    "vertex_count": 2339,
+    "triangle_count": 8665,
+    "material_count": 9,
+    "materials": [
+      "NovaReduxFinal_Lights",
+      "NovaReduxFinal_gloss",
+      "NovaReduxFinal_glo",
+      "NovaReduxFinal_unarmed",
+      "NovaFace04",
+      "NovaFace04_hair",
+      "NovaEyelashes",
+      "ghostRifleNEW2_unarmed",
+      "GhostPistol_unarmed"
+    ],
+    "stride": 48
+  },
+  {
+    "name": "siegeTank",
+    "resource_path": "res://assets/models_test/siegeTank.gltf",
+    "mode": "skinned",
+    "vertex_count": 1205,
+    "triangle_count": 4815,
+    "material_count": 6,
+    "materials": [
+      "SiegeTank",
+      "SiegeTank_glow",
+      "siegeTank_treads_R",
+      "SiegeTankLights_glo",
+      "siegeTank_treads_L",
+      "SiegeTankLights_front"
+    ],
+    "stride": 48
+  },
+  {
+    "name": "vulture",
+    "resource_path": "res://assets/models_test/vulture.gltf",
+    "mode": "triangle",
+    "vertex_count": 3040,
+    "triangle_count": 4486,
+    "material_count": 1,
+    "materials": [
+      "Vulture_gloss"
+    ],
+    "stride": 32
+  },
+  {
+    "name": "wraith",
+    "resource_path": "res://assets/models_test/wraith.gltf",
+    "mode": "triangle",
+    "vertex_count": 783,
+    "triangle_count": 1080,
+    "material_count": 1,
+    "materials": [
+      "Wraith_gloss"
+    ],
+    "stride": 32
+  },
+  {
+    "name": "zergling",
+    "resource_path": "res://assets/models_test/zergling.gltf",
+    "mode": "skinned",
+    "vertex_count": 1054,
+    "triangle_count": 1933,
+    "material_count": 1,
+    "materials": [
+      "zergling"
+    ],
+    "stride": 48
+  }
+]

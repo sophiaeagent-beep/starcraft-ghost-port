@@ -1,0 +1,39 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/level1_assembler.gd" id="1_level1"]
+
+[node name="Level1" type="Node3D"]
+script = ExtResource("1_level1")
+
+[node name="Environment" type="Node3D" parent="."]
+
+[node name="Props" type="Node3D" parent="."]
+
+[node name="Actors" type="Node3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.945519, -0.325568, 0, 0.325568, 0.945519, 0, 18, 56)
+current = true
+fov = 60.0
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.965926, -0.258819, 0, 0.183013, 0.683013, -0.707107, 0.183013, 0.683013, 0.707107, 0, 6, 0)
+light_energy = 2.4
+
+[node name="AmbientPlayer" type="AudioStreamPlayer" parent="."]
+volume_db = -9.0
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="InfoPanel" type="Panel" parent="HUD"]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 860.0
+offset_bottom = 232.0
+
+[node name="InfoLabel" type="Label" parent="HUD/InfoPanel"]
+offset_left = 12.0
+offset_top = 12.0
+offset_right = 832.0
+offset_bottom = 204.0
+autowrap_mode = 3

@@ -1,0 +1,38 @@
+# Game assets — extracted from Xbox build, cannot distribute
+*.nil
+*.nod
+*.npd
+*.nsd
+*.nlfx
+*.not
+*.wav
+*.ogg
+*.mp3
+*.tga
+*.dds
+*.bmp
+
+# Extracted game data directories
+starcraft_ghost/
+scg-modeldump/
+
+# Godot import cache and user settings
+godot_stage/.godot/
+godot_stage/.import/
+*.import
+
+# glTF models extracted from game (large + non-distributable)
+godot_stage/assets/models_all/
+godot_stage/assets/audio/
+godot_stage/assets/levels/*.gltf
+
+# Level data (generated from NIL files — regenerate with nil_parser.py)
+godot_stage/data/level_*.json
+
+# Python cache
+__pycache__/
+*.pyc
+
+# OS junk
+.DS_Store
+Thumbs.db
