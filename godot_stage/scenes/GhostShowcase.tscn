@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene load_steps=3 format=3 uid="uid://byan358klyb60"]
 
 [ext_resource type="Script" path="res://scripts/ghost_showcase.gd" id="1_script"]
 

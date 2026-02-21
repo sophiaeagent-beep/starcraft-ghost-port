@@ -91,6 +91,11 @@ var hit_marker_timer: float = 0.0
 # Damage feedback
 var damage_flash_timer: float = 0.0
 
+# Noclip mode — V to toggle, fly through walls
+var noclip: bool = false
+const NOCLIP_SPEED := 15.0
+const NOCLIP_FAST_SPEED := 45.0
+
 # Audio
 var fire_audio: AudioStreamPlayer3D = null
 
@@ -120,7 +125,7 @@ func _load_player_model() -> void:
 		var inst := (packed as PackedScene).instantiate()
 		if inst != null:
 			model_root.add_child(inst)
-			inst.scale = Vector3.ONE * 0.02
+			# Models are in level-native coordinates — no scale needed
 			return
 	push_warning("Could not load player model, using capsule placeholder")
 	var mi := MeshInstance3D.new()
@@ -315,6 +320,13 @@ func _unhandled_input(event: InputEvent) -> void:
 				Input.mouse_mode = Input.MOUSE_MODE_CAPTURED if mouse_captured else Input.MOUSE_MODE_VISIBLE
 			elif key.keycode == KEY_G:
 				flashlight.visible = not flashlight.visible
+			elif key.keycode == KEY_V:
+				noclip = not noclip
+				# Disable collision in noclip mode
+				var col := get_node_or_null("CollisionShape3D") as CollisionShape3D
+				if col:
+					col.disabled = noclip
+				print("[Player] Noclip: %s" % ("ON" if noclip else "OFF"))
 			elif key.keycode == KEY_R:
 				_start_reload()
 			elif key.keycode == KEY_1:
@@ -349,45 +361,73 @@ func _unhandled_input(event: InputEvent) -> void:
 				_cycle_weapon(1)
 
 
+var _debug_frame: int = 0
+
 func _physics_process(delta: float) -> void:
 	if is_dead:
 		return
 
-	# Gravity
-	if not is_on_floor():
-		velocity.y -= GRAVITY * delta
+	_debug_frame += 1
+	if _debug_frame <= 3 or _debug_frame % 300 == 0:
+		print("[Player] frame=%d pos=%s on_floor=%s noclip=%s" % [
+			_debug_frame, str(global_position), str(is_on_floor()), str(noclip)])
 
-	# Jump
-	if Input.is_key_pressed(KEY_SPACE) and is_on_floor():
-		velocity.y = JUMP_VELOCITY
-
-	# Movement direction (relative to camera yaw)
-	var input_dir := Vector2.ZERO
-	if Input.is_key_pressed(KEY_W):
-		input_dir.y -= 1
-	if Input.is_key_pressed(KEY_S):
-		input_dir.y += 1
-	if Input.is_key_pressed(KEY_A):
-		input_dir.x -= 1
-	if Input.is_key_pressed(KEY_D):
-		input_dir.x += 1
-
-	var speed := SPRINT_SPEED if Input.is_key_pressed(KEY_SHIFT) else MOVE_SPEED
-
-	if input_dir.length_squared() > 0.01:
-		input_dir = input_dir.normalized()
-		var forward := Vector3(sin(yaw), 0, cos(yaw))
-		var right := Vector3(cos(yaw), 0, -sin(yaw))
-		var move_dir := (forward * -input_dir.y + right * input_dir.x).normalized()
-
-		velocity.x = move_dir.x * speed
-		velocity.z = move_dir.z * speed
-		model_root.rotation.y = atan2(move_dir.x, move_dir.z)
+	# Noclip mode: fly through walls, no gravity, camera-relative movement
+	if noclip:
+		var fly_dir := Vector3.ZERO
+		var nspeed := NOCLIP_FAST_SPEED if Input.is_key_pressed(KEY_SHIFT) else NOCLIP_SPEED
+		if Input.is_key_pressed(KEY_W):
+			fly_dir -= camera.global_transform.basis.z
+		if Input.is_key_pressed(KEY_S):
+			fly_dir += camera.global_transform.basis.z
+		if Input.is_key_pressed(KEY_A):
+			fly_dir -= camera.global_transform.basis.x
+		if Input.is_key_pressed(KEY_D):
+			fly_dir += camera.global_transform.basis.x
+		if Input.is_key_pressed(KEY_SPACE):
+			fly_dir += Vector3.UP
+		if Input.is_key_pressed(KEY_CTRL):
+			fly_dir -= Vector3.UP
+		if fly_dir.length_squared() > 0.01:
+			global_position += fly_dir.normalized() * nspeed * delta
+		velocity = Vector3.ZERO
 	else:
-		velocity.x = move_toward(velocity.x, 0, speed * delta * 10.0)
-		velocity.z = move_toward(velocity.z, 0, speed * delta * 10.0)
+		# Normal walking mode
+		# Gravity
+		if not is_on_floor():
+			velocity.y -= GRAVITY * delta
 
-	move_and_slide()
+		# Jump
+		if Input.is_key_pressed(KEY_SPACE) and is_on_floor():
+			velocity.y = JUMP_VELOCITY
+
+		# Movement direction (relative to camera yaw)
+		var input_dir := Vector2.ZERO
+		if Input.is_key_pressed(KEY_W):
+			input_dir.y -= 1
+		if Input.is_key_pressed(KEY_S):
+			input_dir.y += 1
+		if Input.is_key_pressed(KEY_A):
+			input_dir.x -= 1
+		if Input.is_key_pressed(KEY_D):
+			input_dir.x += 1
+
+		var speed := SPRINT_SPEED if Input.is_key_pressed(KEY_SHIFT) else MOVE_SPEED
+
+		if input_dir.length_squared() > 0.01:
+			input_dir = input_dir.normalized()
+			var forward := Vector3(sin(yaw), 0, cos(yaw))
+			var right := Vector3(cos(yaw), 0, -sin(yaw))
+			var move_dir := (forward * -input_dir.y + right * input_dir.x).normalized()
+
+			velocity.x = move_dir.x * speed
+			velocity.z = move_dir.z * speed
+			model_root.rotation.y = atan2(move_dir.x, move_dir.z)
+		else:
+			velocity.x = move_toward(velocity.x, 0, speed * delta * 10.0)
+			velocity.z = move_toward(velocity.z, 0, speed * delta * 10.0)
+
+		move_and_slide()
 
 	# Update camera orbit
 	camera_pivot.global_position = global_position + Vector3(0, CAMERA_HEIGHT, 0)
@@ -512,8 +552,8 @@ func _spawn_impact(pos: Vector3, normal: Vector3) -> void:
 	mat.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
 	mat.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
 	impact.material_override = mat
-	impact.global_position = pos
 	get_tree().root.add_child(impact)
+	impact.global_position = pos
 
 	# Fade out and remove
 	var tween := impact.create_tween()

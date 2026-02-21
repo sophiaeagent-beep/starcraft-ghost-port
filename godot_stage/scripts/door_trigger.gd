@@ -11,6 +11,7 @@ enum DoorType { DOOR, HACK_CONSOLE, LADDER, ELEVATOR, GENERIC }
 @export var interaction_text: String = "Press F to interact"
 @export var open_speed: float = 2.0
 @export var door_name: String = "door"
+@export var model_path: String = ""  # glTF path set by level loader
 
 ## How far the door slides when opening (meters)
 const DOOR_SLIDE_DISTANCE := 3.0
@@ -35,50 +36,63 @@ func _ready() -> void:
 
 
 func _setup_visuals() -> void:
-	# Create visual based on type
-	door_mesh = MeshInstance3D.new()
-	door_mesh.name = "DoorMesh"
+	# Try loading a glTF model if model_path was set by the level loader
+	var model_loaded := false
+	if model_path != "":
+		var scene = load(model_path)
+		if scene is PackedScene:
+			var model := (scene as PackedScene).instantiate()
+			if model is Node3D:
+				model.name = "DoorModel"
+				add_child(model)
+				door_mesh = null  # No box mesh — model handles visuals
+				model_loaded = true
 
-	var mat := StandardMaterial3D.new()
-	mat.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
+	if not model_loaded:
+		# Fallback: colored box marker
+		door_mesh = MeshInstance3D.new()
+		door_mesh.name = "DoorMesh"
 
-	match door_type:
-		DoorType.DOOR:
-			var box := BoxMesh.new()
-			box.size = Vector3(2.0, 3.0, 0.2)
-			door_mesh.mesh = box
-			mat.albedo_color = Color(0.3, 0.4, 0.7, 0.85)
-			mat.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
-			door_mesh.position.y = 1.5
-		DoorType.HACK_CONSOLE:
-			var box := BoxMesh.new()
-			box.size = Vector3(0.8, 1.2, 0.4)
-			door_mesh.mesh = box
-			mat.albedo_color = Color(0.1, 0.8, 0.3, 0.9)
-			mat.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
-			door_mesh.position.y = 0.6
-		DoorType.LADDER:
-			var box := BoxMesh.new()
-			box.size = Vector3(0.6, 4.0, 0.2)
-			door_mesh.mesh = box
-			mat.albedo_color = Color(0.7, 0.5, 0.2, 0.8)
-			mat.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
-			door_mesh.position.y = 2.0
-		DoorType.ELEVATOR:
-			var box := BoxMesh.new()
-			box.size = Vector3(2.5, 0.2, 2.5)
-			door_mesh.mesh = box
-			mat.albedo_color = Color(0.5, 0.5, 0.6, 0.8)
-			mat.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
-		_:
-			var box := BoxMesh.new()
-			box.size = Vector3(1.0, 1.0, 1.0)
-			door_mesh.mesh = box
-			mat.albedo_color = Color(0.4, 0.4, 0.8, 0.6)
-			mat.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
+		var mat := StandardMaterial3D.new()
+		mat.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
 
-	door_mesh.material_override = mat
-	add_child(door_mesh)
+		match door_type:
+			DoorType.DOOR:
+				var box := BoxMesh.new()
+				box.size = Vector3(2.0, 3.0, 0.2)
+				door_mesh.mesh = box
+				mat.albedo_color = Color(0.3, 0.4, 0.7, 0.85)
+				mat.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
+				door_mesh.position.y = 1.5
+			DoorType.HACK_CONSOLE:
+				var box := BoxMesh.new()
+				box.size = Vector3(0.8, 1.2, 0.4)
+				door_mesh.mesh = box
+				mat.albedo_color = Color(0.1, 0.8, 0.3, 0.9)
+				mat.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
+				door_mesh.position.y = 0.6
+			DoorType.LADDER:
+				var box := BoxMesh.new()
+				box.size = Vector3(0.6, 4.0, 0.2)
+				door_mesh.mesh = box
+				mat.albedo_color = Color(0.7, 0.5, 0.2, 0.8)
+				mat.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
+				door_mesh.position.y = 2.0
+			DoorType.ELEVATOR:
+				var box := BoxMesh.new()
+				box.size = Vector3(2.5, 0.2, 2.5)
+				door_mesh.mesh = box
+				mat.albedo_color = Color(0.5, 0.5, 0.6, 0.8)
+				mat.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
+			_:
+				var box := BoxMesh.new()
+				box.size = Vector3(1.0, 1.0, 1.0)
+				door_mesh.mesh = box
+				mat.albedo_color = Color(0.4, 0.4, 0.8, 0.6)
+				mat.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
+
+		door_mesh.material_override = mat
+		add_child(door_mesh)
 
 	# Interaction prompt (hidden by default)
 	prompt_label = Label3D.new()
@@ -133,19 +147,24 @@ func _setup_trigger_area() -> void:
 
 
 func _on_body_entered(body: Node3D) -> void:
-	if body.name == "Player" or body is CharacterBody3D:
-		# Check if it's actually the player (not an enemy)
-		if body.has_method("_toggle_player_mode") or body.name == "Player":
-			return  # This is the level loader, skip
-		player_in_zone = true
-		if prompt_label:
-			prompt_label.visible = true
-		# Auto-open doors when player enters
-		if door_type == DoorType.DOOR and not is_locked:
-			_open()
+	if not (body is CharacterBody3D):
+		return
+	# Distinguish the player from enemies — player has a heal() method
+	if not body.has_method("heal"):
+		return
+	player_in_zone = true
+	if prompt_label:
+		prompt_label.visible = true
+	# Auto-open doors when player enters
+	if door_type == DoorType.DOOR and not is_locked:
+		_open()
 
 
 func _on_body_exited(body: Node3D) -> void:
+	if not (body is CharacterBody3D):
+		return
+	if not body.has_method("heal"):
+		return
 	player_in_zone = false
 	if prompt_label:
 		prompt_label.visible = false
@@ -211,7 +230,12 @@ func _close() -> void:
 
 
 func _update_door_position() -> void:
+	var slide := (target_position - initial_position) * current_t
 	if door_mesh:
-		# Slide the mesh, not the whole node (so trigger zone stays put)
-		var slide := (target_position - initial_position) * current_t
+		# Slide the box mesh, not the whole node (so trigger zone stays put)
 		door_mesh.position = Vector3(0, 1.5, 0) + slide
+	else:
+		# Slide the glTF model node
+		var model := get_node_or_null("DoorModel")
+		if model:
+			model.position = slide

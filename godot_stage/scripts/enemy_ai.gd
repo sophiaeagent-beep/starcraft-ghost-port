@@ -41,8 +41,11 @@ var label: Label3D = null
 func _ready() -> void:
 	patrol_origin = global_position
 	_setup_visuals()
-	# Find player in scene tree (deferred to ensure scene is built)
-	call_deferred("_find_player")
+	# Player may not exist yet (spawned in same frame) — retry periodically
+	_find_player()
+
+
+var _player_search_timer: float = 0.0
 
 
 func _find_player() -> void:
@@ -73,7 +76,7 @@ func _setup_visuals() -> void:
 			var inst := (packed as PackedScene).instantiate()
 			if inst != null:
 				model_root.add_child(inst)
-				inst.scale = Vector3.ONE * 0.02
+				# Models are in level-native coordinates — no scale needed
 				loaded = true
 
 	# Fallback: colored capsule
@@ -99,13 +102,13 @@ func _setup_visuals() -> void:
 	bar_mat.albedo_color = Color(0.1, 1.0, 0.1)
 	bar_mat.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
 	health_bar.material_override = bar_mat
-	health_bar.position = Vector3(0, 2.2, 0)
+	health_bar.position = Vector3(0, 5.5, 0)
 	add_child(health_bar)
 
 	# Name/state label
 	label = Label3D.new()
 	label.text = "%s [IDLE]" % enemy_type
-	label.position = Vector3(0, 2.5, 0)
+	label.position = Vector3(0, 6.0, 0)
 	label.pixel_size = 0.008
 	label.font_size = 28
 	label.modulate = Color(1.0, 0.3, 0.2)
@@ -117,13 +120,22 @@ func _setup_visuals() -> void:
 func _physics_process(delta: float) -> void:
 	if state == State.DEAD:
 		return
+	if not is_inside_tree():
+		return
+
+	# Periodically search for player if we haven't found one yet
+	if player == null or not is_instance_valid(player):
+		_player_search_timer += delta
+		if _player_search_timer >= 1.0:
+			_player_search_timer = 0.0
+			_find_player()
 
 	# Gravity
 	if not is_on_floor():
 		velocity.y -= GRAVITY * delta
 
 	var dist_to_player := INF
-	if player != null and is_instance_valid(player):
+	if player != null and is_instance_valid(player) and player.is_inside_tree():
 		dist_to_player = global_position.distance_to(player.global_position)
 
 	match state:
@@ -171,7 +183,7 @@ func _state_alert(delta: float, dist: float) -> void:
 	velocity.z = 0
 	alert_timer += delta
 
-	if player != null:
+	if player != null and is_instance_valid(player) and player.is_inside_tree():
 		var to_player := (player.global_position - global_position)
 		to_player.y = 0
 		if to_player.length() > 0.1:
@@ -185,7 +197,7 @@ func _state_alert(delta: float, dist: float) -> void:
 
 
 func _state_chase(delta: float, dist: float) -> void:
-	if player == null:
+	if player == null or not is_instance_valid(player) or not player.is_inside_tree():
 		state = State.IDLE
 		return
 
@@ -216,7 +228,7 @@ func _state_attack(delta: float, dist: float) -> void:
 	velocity.z = 0
 	attack_timer += delta
 
-	if player != null:
+	if player != null and is_instance_valid(player) and player.is_inside_tree():
 		var to_player := (player.global_position - global_position)
 		to_player.y = 0
 		if to_player.length() > 0.1:
@@ -266,7 +278,7 @@ func _die() -> void:
 	health = 0.0
 	velocity = Vector3.ZERO
 	# Tip over
-	if model_root:
+	if model_root and is_inside_tree():
 		var tween := create_tween()
 		tween.tween_property(model_root, "rotation_degrees:x", -90.0, 0.5)
 	# Hide health bar
@@ -274,7 +286,8 @@ func _die() -> void:
 		health_bar.visible = false
 	if label:
 		label.modulate = Color(0.5, 0.5, 0.5, 0.5)
-	print("[%s] died at %s" % [enemy_type, str(global_position)])
+	if is_inside_tree():
+		print("[%s] died at %s" % [enemy_type, str(global_position)])
 
 
 func _update_label() -> void:
